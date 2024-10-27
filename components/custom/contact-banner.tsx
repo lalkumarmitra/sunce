@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ContactBanner = () => {
     return (
-        <div className="hidden md:flex justify-between text-sm gap-4 px-14 py-1 font-semibold text-white whitespace-nowrap bg-gradient-to-r from-pink-500 to-blue-500">
+        <div className="flex justify-between text-sm gap-4 px-14 py-1 font-semibold text-white whitespace-nowrap bg-gradient-to-r from-pink-500 to-blue-500">
             <div className="flex gap-4">
                 <Link href="mailto:info@suncerenewable.com" className="hover:text-yellow-300 transition-colors duration-300">info@suncerenewable.com</Link>
                 <Link href="tel:+919540263987" className="hover:text-yellow-300 transition-colors duration-300">+91 9540263987</Link>
