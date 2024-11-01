@@ -42,7 +42,7 @@ function CounterItem({ value, label, suffix = "", className = "" }: CounterItemP
                 <div className="flex flex-col items-center gap-3" ref={inViewRef}>
                     <div
                         ref={countRef}
-                        className="text-4xl lg:text-2xl whitespace-nowrap font-semibold text-muted-foreground"
+                        className="text-3xl lg:text-2xl whitespace-nowrap font-semibold text-muted-foreground"
                     >
                         0
                     </div>

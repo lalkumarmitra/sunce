@@ -70,6 +70,7 @@ const config: Config = {
 		animation: {
 			"text-gradient": "text-gradient 3s linear infinite",
 			'gradient-background': 'gradient-background 3s ease infinite',
+			'zoom-in': 'zoom-in 0.5s ease-out forwards',
 		},
 		keyframes: {
 			"text-gradient": {
@@ -80,7 +81,11 @@ const config: Config = {
 			'gradient-background': {
 				'0%, 100%': { backgroundPosition: '0% 50%' },
 				'50%': { backgroundPosition: '100% 50%' },
-			}
+			},
+			'zoom-in': {
+				'0%': { transform: 'scale(0.95)', opacity: '0' },
+				'100%': { transform: 'scale(1)', opacity: '1' },
+			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],

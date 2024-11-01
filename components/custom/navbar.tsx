@@ -4,10 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import ContactBanner from "./contact-banner";
-import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
-import { Button } from "../ui/button";
-import { Menu } from "lucide-react";
 import { SidebarTrigger } from "../ui/sidebar";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "../ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 
 const Navbar = () => {
@@ -65,24 +64,46 @@ const HorizontalNavigation = () => {
                 >
                     Home
                 </Link>
-                <Link
-                    href={'/company'}
-                    className={` transition-colors hover:text-foreground whitespace-nowrap ${isActive('/company') ? 'text-foreground' : 'text-muted-foreground/70'}`}
-                >
-                    Company
-                </Link>
+                <DropdownMenu >
+                    <DropdownMenuTrigger asChild>
+                        <span className={`cursor-pointer transition-colors hover:text-foreground whitespace-nowrap 
+                            ${(isActive('/company') || isActive('/company/management') || isActive('/company/careers')) ? 'text-foreground' : 'text-muted-foreground/70'}`
+                        }>
+                            Company <ChevronDown className="size-4 inline ms-[2px]" />
+                        </span>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem>
+                            <Link href={'/company'}>About Us</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href={'/company/management'}>Management</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href={'/company/careers'}>Careers</Link>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
                 <Link
                     href={'/products'}
                     className={` transition-colors hover:text-foreground whitespace-nowrap ${isActive('/products') ? 'text-foreground' : 'text-muted-foreground/70'}`}
                 >
                     Products
                 </Link>
-                <Link
-                    href={'/services'}
-                    className={` transition-colors hover:text-foreground whitespace-nowrap ${isActive('/services') ? 'text-foreground' : 'text-muted-foreground/70'}`}
-                >
-                    Our Services
-                </Link>
+                <DropdownMenu >
+                    <DropdownMenuTrigger asChild>
+                        <span className={`cursor-pointer transition-colors hover:text-foreground whitespace-nowrap 
+                            ${(isActive('/services') || isActive('/services/inverter-servicing')) ? 'text-foreground' : 'text-muted-foreground/70'}`
+                        }>
+                            Our Services <ChevronDown className="size-4 inline ms-[2px]" />
+                        </span>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem>
+                            <Link href={'/services/inverter-servicing'}>Inverter servicing</Link>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
                 <Link
                     href={'/news'}
                     className={` transition-colors hover:text-foreground whitespace-nowrap ${isActive('/news') ? 'text-foreground' : 'text-muted-foreground/70'}`}
