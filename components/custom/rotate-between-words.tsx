@@ -4,7 +4,6 @@ import { FC, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import AnimatedGradientText from "./animated-gradient-text";
 
 interface Props {
   words: string[];

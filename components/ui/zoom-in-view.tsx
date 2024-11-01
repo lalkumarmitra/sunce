@@ -12,8 +12,6 @@ interface ZoomInViewProps {
 
 export default function ZoomInView({ children, className = "", delay = 0 }: ZoomInViewProps) {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
     return (
         <motion.div
             ref={ref}

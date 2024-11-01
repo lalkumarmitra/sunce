@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useInView } from "react-intersection-observer"
-import { motion, useMotionValue, useSpring, animate } from "framer-motion"
+import { animate } from "framer-motion"
 
 interface CounterItemProps {
     value: number

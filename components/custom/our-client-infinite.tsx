@@ -4,6 +4,7 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselApi,
 } from "@/components/ui/carousel"
 import { useEffect, useState } from "react"
 import Image, { StaticImageData } from "next/image"
@@ -18,7 +19,7 @@ import logo8 from "@/public/assets/clients/sunsource-energy.png"
 import { Card, CardContent } from "../ui/card"
 
 export default function OurClientInfinite() {
-    const [api, setApi] = useState<any>()
+    const [api, setApi] = useState<CarouselApi | null>(null)
 
     const logos: StaticImageData[] = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8]
 

@@ -26,7 +26,6 @@ const Navbar = () => {
 export default Navbar;
 
 const MobileNavigation = () => {
-    const router = useRouter();
     return (
         <div className="flex justify-between items-center w-full gap-6 text-sm font-semibold px-8 py-2 h-auto">
             <Link href={'/'} className="w-12 overflow-hidden">

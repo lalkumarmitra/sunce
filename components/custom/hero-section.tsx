@@ -2,9 +2,8 @@ import { MoveLeft } from "lucide-react";
 import RotateBetween from "./rotate-between-words";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, SendHorizonal } from "lucide-react";
+import { SendHorizonal } from "lucide-react";
 import ZoomInView from "../ui/zoom-in-view";
-import ZoomOutView from "../ui/zoom-out-view";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function HeroSection() {
