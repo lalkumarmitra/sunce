@@ -23,7 +23,7 @@ export default function Home() {
 								Sunce provides innovative product and service solutions for human life and the Industries.
 							</h3>
 						<p className="text-muted-foreground">
-							One of Sunce's competitive advantages is our persistent commitment to innovation and technology. We are industry leader in providing innovative, value-add products and services. To achieve this, we have a team of brightest people, gathered deep market insights and developed a full spectrum of commercialization capability to help us build the future.
+							One of Sunce&apos;s competitive advantages is our persistent commitment to innovation and technology. We are industry leader in providing innovative, value-add products and services. To achieve this, we have a team of brightest people, gathered deep market insights and developed a full spectrum of commercialization capability to help us build the future.
 							</p>
 						</div>
 					</ZoomInView>
@@ -36,21 +36,21 @@ export default function Home() {
 						<ZoomInView>
 							<h4 className="text-xl font-semibold text-indigo-800">Find Out More About Us</h4>
 							<p className="text-sm max-w-4xl text-muted-foreground">
-								Sunce was formed in 2016 by three experienced technocrats who knew there was a better way to develop products and grow businesses. Our approach involves a 'market-pull' orientation rather than technology-push. By gathering deep market insight before building the technology solutions, we ensure there is both a customer and a market willingness to embrace the products and businesses we develop.
-								Our strong commercial mindset is a key aspect of Sunce's approach to build products and build businesses. It all starts with associating entrepreneurial thinkers who possess both technical expertise and business acumen.
+								Sunce was formed in 2016 by three experienced technocrats who knew there was a better way to develop products and grow businesses. Our approach involves a &apos;market-pull&apos; orientation rather than &apos;technology-push&apos;. By gathering deep market insight before building the technology solutions, we ensure there is both a customer and a market willingness to embrace the products and businesses we develop.
+								Our strong commercial mindset is a key aspect of Sunce&apos;s approach to build products and build businesses. It all starts with associating entrepreneurial thinkers who possess both technical expertise and business acumen.
 								We have selected over 350 of the brightest people, gathered deep market insights and developed a full spectrum of commercialization capabilities to help us build the future.
 							</p>
 						</ZoomInView>
 						<ZoomInView>
 							<h4 className="text-xl font-semibold text-indigo-800">Our origins taught us the value of market insight</h4>
 							<p className="text-sm max-w-4xl text-muted-foreground">
-								Sunce Renewables was formed in 2009 by four globally experienced biomedical executives who knew there was a better way to develop products and grow businesses. Our approach involves a 'market-pull' orientation rather than 'technology-push'. By gathering deep market insight before building the technology solutions, we ensure there is both a customer and a market willingness to embrace the products and businesses we develop.
+								Sunce Renewables was formed in 2009 by four globally experienced biomedical executives who knew there was a better way to develop products and grow businesses. Our approach involves a &apos;market-pull&apos; orientation rather than &apos;technology-push&apos;. By gathering deep market insight before building the technology solutions, we ensure there is both a customer and a market willingness to embrace the products and businesses we develop.
 								</p>
 						</ZoomInView>
 						<ZoomInView>
 							<h4 className="text-xl font-semibold text-indigo-800">We are commercial thinkers</h4>
 							<p className="text-sm max-w-4xl text-muted-foreground">
-								Our strong commercial mindset is a key aspect of Sunce Renewables™' approach to building products and building businesses, and it all starts with hiring entrepreneurial thinkers who possess both technical expertise and commercial acumen.
+								Our strong commercial mindset is a key aspect of Sunce Renewables&apos; approach to building products and building businesses, and it all starts with hiring entrepreneurial thinkers who possess both technical expertise and commercial acumen.
 							</p>
 						</ZoomInView>
 						<div className="flex justify-between items-center">
