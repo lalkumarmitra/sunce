@@ -16,7 +16,7 @@ export default function Home() {
 		<>
 			<HeroSection />
 			<section className="lg:text-center pt-28 pb-16 px-16 bg-gray-200">
-				<div className="container max-w-4xl grid gap-8 mx-auto">
+				<div className="container px-4 lg:max-w-4xl grid gap-8 mx-auto">
 					<ZoomInView >
 						<div className="grid gap-8">
 							<h3 className="text-2xl text-indigo-800 font-semibold">
