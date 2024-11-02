@@ -9,12 +9,11 @@ interface GridPatternProps {
     height?: number
     x?: number
     y?: number
-    strokeDasharray?: any
+    strokeDasharray?: string | number
     numSquares?: number
     className?: string
     maxOpacity?: number
     duration?: number
-    repeatDelay?: number
 }
 
 const GridPattern: React.FC<GridPatternProps> = ({
@@ -27,7 +26,6 @@ const GridPattern: React.FC<GridPatternProps> = ({
     className,
     maxOpacity = 0.5,
     duration = 4,
-    repeatDelay = 0.5,
     ...props
 }) => {
     const id = useId()
@@ -68,10 +66,11 @@ const GridPattern: React.FC<GridPatternProps> = ({
     useEffect(() => {
         if (dimensions.width && dimensions.height)
             setSquares(generateSquares(numSquares))
-    }, [dimensions, numSquares])
+    }, [dimensions, numSquares,generateSquares])
 
     // Resize observer to update container dimensions
     useEffect(() => {
+        const reference = containerRef.current;
         const resizeObserver = new ResizeObserver((entries) => {
             for (const entry of entries) {
                 setDimensions({
@@ -81,12 +80,12 @@ const GridPattern: React.FC<GridPatternProps> = ({
             }
         })
 
-        if (containerRef.current)
-            resizeObserver.observe(containerRef.current)
+        if (reference)
+            resizeObserver.observe(reference)
 
         return () => {
-            if (containerRef.current)
-                resizeObserver.unobserve(containerRef.current)
+            if (reference)
+                resizeObserver.unobserve(reference)
         }
     }, [containerRef])
 

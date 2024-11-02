@@ -1,10 +1,8 @@
 import ContactFooter from "@/components/custom/contact-footer";
 import { MultilayerCard } from "@/components/designer-card";
 import Particles from "@/components/particle-bg";
-import { Button } from "@/components/ui/button";
 import ZoomInView from "@/components/ui/zoom-in-view";
 import Image from "next/image";
-import Link from "next/link";
 
 
 export default function CompanyPage() {
