@@ -71,6 +71,7 @@ const config: Config = {
 			"text-gradient": "text-gradient 3s linear infinite",
 			'gradient-background': 'gradient-background 3s ease infinite',
 			'zoom-in': 'zoom-in 0.5s ease-out forwards',
+			shimmer: "shimmer 2s linear infinite"
 		},
 		keyframes: {
 			"text-gradient": {
@@ -86,6 +87,14 @@ const config: Config = {
 				'0%': { transform: 'scale(0.95)', opacity: '0' },
 				'100%': { transform: 'scale(1)', opacity: '1' },
 			},
+			shimmer: {
+				from: {
+					"backgroundPosition": "0 0"
+				},
+				to: {
+					"backgroundPosition": "-200% 0"
+				}
+			}
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
