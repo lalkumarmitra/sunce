@@ -46,10 +46,10 @@ export default function HeroSection() {
                 </h1>
                 <div className="max-w-3xl mb-8 text-center">
                     <TextGenerateEffect
-                        words={`
-                            We Innovate breakthrough products and commercially successful businesses that transform industries and have a positive impact in human life.
-                        `}
+                        words="We Innovate breakthrough products and commercially successful businesses that transform industries and have a positive impact in human life."
                         className="text-lg text-muted dark:text-gray-200 md:text-xl lg:text-2xl"
+                        duration={0.8}
+                        initialDelay={0.1}
                     />
                 </div>
                 <button className="animate-in slide-in-from-bottom duration-1000 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

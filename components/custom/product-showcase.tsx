@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import ZoomInView from "../ui/zoom-in-view"
 
 // Product type definition
 interface Product {
@@ -97,7 +98,9 @@ export default function ProductShowcase() {
                             key={product.id}
                             variants={itemVariants}
                         >
-                            <ProductCard product={product} isMobile={isMobile} />
+                            <ZoomInView>
+                                <ProductCard product={product} isMobile={isMobile} />
+                            </ZoomInView>
                         </motion.div>
                     ))}
                 </motion.div>
