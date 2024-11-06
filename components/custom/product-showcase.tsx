@@ -8,40 +8,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import ZoomInView from "../ui/zoom-in-view"
-
-// Product type definition
-interface Product {
-    id: string
-    name: string
-    description: string
-    image: string
-    link: string
-}
-
-// Sample products data
-const products: Product[] = [
-    {
-        id: "1",
-        name: "SNet Portable String Monitoring Device",
-        description: "The SNet Portable String Monitoring Device is a cutting-edge PV string monitoring system designed to precisely detect abnormal conditions within a solar power plant. It monitors all strings within a Combiner Box without disrupting power generation.",
-        image: "/assets/products/7-min-removebg-preview.png",
-        link: "/products/solar-inverter"
-    },
-    {
-        id: "2",
-        name: "SNet - LoRa",
-        description: "Advanced LoRa Technology (wireless) for Reliable Data Acquisition and Transmission.",
-        image: "/assets/products/1-min-removebg-preview.png",
-        link: "/products/battery-system"
-    },
-    {
-        id: "3",
-        name: "SNet RS485 to Ethernet Convertor",
-        description: "Acts as MODBUS TCP Slave and MODBUS RTU Master. Supports standard MODBUS commands.",
-        image: "/assets/products/3-min-removebg-preview.png",
-        link: "/products/monitoring-system"
-    }
-]
+import { products } from "@/public/product-data"
+import { ProductType } from "@/public/product-data"
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -67,6 +35,7 @@ const itemVariants = {
 
 export default function ProductShowcase() {
     const isMobile = useIsMobile()
+    const showcaseProducts = [1,2,4]
 
     return (
         <section className="py-16 px-4 md:px-8 bg-gray-50">
@@ -80,8 +49,10 @@ export default function ProductShowcase() {
                     <h2 className="text-3xl font-bold text-indigo-800">Our Products</h2>
                     <Link href="/products">
                         <Button variant="outline">
-                            View All Products
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <Link href="/products">
+                                View All Products
+                                <ArrowRight className="ml-2 h-4 w-4 inline" />
+                            </Link>
                         </Button>
                     </Link>
                 </motion.div>
@@ -93,7 +64,7 @@ export default function ProductShowcase() {
                     viewport={{ once: true, margin: "-100px" }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
-                    {products.map((product) => (
+                    {products.filter(product => showcaseProducts.includes(product.id)).map((product) => (
                         <motion.div
                             key={product.id}
                             variants={itemVariants}
@@ -109,7 +80,7 @@ export default function ProductShowcase() {
     )
 }
 
-function ProductCard({ product, isMobile }: { product: Product; isMobile: boolean }) {
+function ProductCard({ product, isMobile }: { product: ProductType; isMobile: boolean }) {
     return (
         <motion.div
             whileHover={isMobile ? {} : { y: -5 }}

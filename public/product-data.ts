@@ -7,6 +7,7 @@ export type ProductType = {
     about: string | null;
     features: string[];
     specifications: string[];
+    link: string;
 }
 
 export const products: ProductType[] = [
@@ -29,6 +30,7 @@ export const products: ProductType[] = [
             "The SNet unit is powered directly from the solar string.",
             "Voltage measurement up to 1500 V DC in any grounded PV system.",
         ],
+        link: "/products/1"
     },
     {
         id: 2,
@@ -55,6 +57,7 @@ export const products: ProductType[] = [
             "Supports ESD protection.",
             "Supports RS485 anti surge.",
         ],
+        link:'/products/2',
     },
     {
         id: 3,
@@ -77,6 +80,7 @@ export const products: ProductType[] = [
             "Dimensions: [Specify]",
             "Certifications: CE, ROHS, ISO",
         ],
+        link:'/products/3'
     },
     {
         id: 4,
@@ -96,6 +100,7 @@ export const products: ProductType[] = [
             "Highly Reliable and Low cost",
         ],
         specifications:[],
+        link:'/products/4',
     },
     {
         id: 5,
@@ -122,5 +127,6 @@ export const products: ProductType[] = [
             "Sleep Mode: For low power consumption",
         ],
         specifications:[],
+        link:'/products/5',
     },
 ];

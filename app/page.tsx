@@ -7,6 +7,7 @@ import ZoomInView from "@/components/ui/zoom-in-view";
 import { ArrowRightIcon, AwardIcon, CheckIcon } from "lucide-react";
 import Image from "next/image";
 import ProductShowcase from "@/components/custom/product-showcase";
+import Link from "next/link";
 
 
 
@@ -55,7 +56,12 @@ export default function Home() {
 						</ZoomInView>
 						<div className="flex justify-between items-center">
 							<h5 className="flex items-center text-indigo-800"><AwardIcon className="w-6 h-6 inline me-2" />Certified Company</h5>
-							<Button variant="outline">Read More <ArrowRightIcon className="w-4 h-4 inline ms-2" /></Button>
+							<Button variant="outline">
+								<Link href="/about">
+									Read More 
+									<ArrowRightIcon className="w-4 h-4 inline ms-2" />
+								</Link>
+							</Button>
 						</div>
 					</div>
 					<ZoomInView>
