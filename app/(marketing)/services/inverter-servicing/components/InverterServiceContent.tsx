@@ -128,7 +128,7 @@ export default function InverterServiceContent() {
                                 <h2 className="text-2xl font-semibold">SolarCraft Solutions: Elevating Efficiency and Excellence</h2>
                                 <div className="space-y-4 text-muted-foreground">
                                     <p>For those overseeing large-scale solar farms and managing solar plant operations, we extend a distinctive service tailored to your needs.</p>
-                                    <p>This unique service not only enables you to defer costly repowering initiatives temporarily but also contributes to a substantial extension of your solar plants' operational lifespan.</p>
+                                    <p>This unique service not only enables you to defer costly repowering initiatives temporarily but also contributes to a substantial extension of your solar plants&apos; operational lifespan.</p>
                                 </div>
                             </motion.div>
                             <motion.div
